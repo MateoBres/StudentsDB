@@ -27,7 +27,7 @@ class Alumno(models.Model):
     )
     actividad = models.CharField(max_length=30,choices=ACTIVIDAD, default='')
     deuda = models.CharField(max_length=20, blank=True, null=True, default='')
-    pagado = models.BooleanField()
+    fecha_pago = models.DateField(blank=True, null=True)
     cl1 = models.BooleanField()
     cl2 = models.BooleanField()
     cl3 = models.BooleanField()
