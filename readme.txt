@@ -6,7 +6,7 @@ python manage.py runserver
 
 python manage.py makemigrations
 
-si añades un campo (blank=True, null=True) para que no sea un campo obligatorio, te pedira' que quieres hacer con los alumnos que ya estaban registrados:
+si añades un campo (default='') para que no sea un campo obligatorio, te pedira' que quieres hacer con los alumnos que ya estaban registrados:
 
 opcion 1 darle un valor de default(null o blank o 0 si es un numero o un '-' )
 
