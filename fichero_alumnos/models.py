@@ -3,9 +3,6 @@ from datetime import datetime
 
 # Create your models here.
 class Alumno(models.Model):
-    deuda = models.CharField(max_length=30, blank=True, null=True, default='')
-    pagado = models.BooleanField()
-
     nombre = models.CharField(max_length=30)
     apellido = models.CharField(max_length=30, blank=True, null=True, default='')
     edad = models.IntegerField(blank=True, null=True, default='')
@@ -19,14 +16,8 @@ class Alumno(models.Model):
     desc_familia = models.BooleanField()
     discapacidad = models.BooleanField()
     comentarios = models.TextField(blank=True, null=True)
-    VECES = (
-        (1,1),
-        (2,2),
-        (3,3),
-        (4,4),
-        )
-    veces = models.IntegerField(choices=VECES, default='')
-    dias = models.CharField(max_length=30,blank=True, null=True, default='')
+   
+    
     horario = models.CharField(max_length=30,blank=True, null=True, default='')
     ACTIVIDAD = (
         ('Bebes','Bebes'),
@@ -35,6 +26,18 @@ class Alumno(models.Model):
         ('AquaFitness','AquaFitness'),
     )
     actividad = models.CharField(max_length=30,choices=ACTIVIDAD, default='')
+    deuda = models.CharField(max_length=20, blank=True, null=True, default='')
+    pagado = models.BooleanField()
+    cl1 = models.BooleanField()
+    cl2 = models.BooleanField()
+    cl3 = models.BooleanField()
+    cl4 = models.BooleanField()
+    cl5 = models.BooleanField()
+    cl6 = models.BooleanField()
+    cl7 = models.BooleanField()
+    cl8 = models.BooleanField()
+    cl9 = models.BooleanField()
+    cl10 = models.BooleanField()
     
     foto = models.ImageField(upload_to='fotos/alumnos', blank=True, null=True)
     

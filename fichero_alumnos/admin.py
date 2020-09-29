@@ -12,11 +12,11 @@ admin.site.index_title = 'Benvenido al portal de administración de alumnos de L
 @admin.register(Alumno)
 class AlumnoAdmin(admin.ModelAdmin):
 
-    list_display = ('nombre', 'apellido', 'edad', 'dias', 'horario', 'telefono', 'pagado','deuda')
-    list_display_links = ('nombre', 'apellido', 'edad', 'dias', 'horario', 'telefono')
-    list_editable = ('pagado','deuda')
-    search_fields = ('nombre', 'apellido', 'dias', 'horario', 'telefono')
-    list_filter = ('actividad', 'dias', 'edad', 'horario', 'pagado', 'deuda', 'cargado', 'discapacidad', 'desc_familia')
+    list_display = ('nombre', 'apellido', 'telefono', 'horario','cl1', 'cl2', 'cl3','cl4','cl5','cl6','cl7','cl8','cl9','cl10' ,'deuda', 'pagado', 'desc_familia')
+    list_display_links = ('nombre', 'apellido', 'horario')
+    list_editable = ('pagado',  'cl1', 'cl2', 'cl3','cl4','cl5','cl6','cl7','cl8','cl9','cl10')
+    search_fields = ('nombre', 'apellido','horario')
+    # list_filter = ('actividad', 'pagado', 'cargado', 'discapacidad', 'desc_familia')
 
 
 # class EdadFiltro(SimpleListFilter):
