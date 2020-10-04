@@ -16,7 +16,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('deuda', models.CharField(blank=True, default='', max_length=30, null=True)),
-                ('pagado', models.BooleanField()),
+               
                 ('nombre', models.CharField(max_length=30)),
                 ('apellido', models.CharField(max_length=30)),
                 ('edad', models.IntegerField()),
