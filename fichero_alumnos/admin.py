@@ -15,8 +15,8 @@ admin.site.index_title = 'Benvenido al portal de administración de alumnos de L
 class AlumnoAdmin(admin.ModelAdmin):
 
     list_display = ('nombre', 'apellido','horario', 'edad', 'telefono', 'email', 'desc_familia','deuda','discapacidad', 'comentarios')
-    list_display_links = ('nombre', 'apellido', 'telefono', 'horario', 'email',)
-    list_editable = ( )
+    list_display_links = ('nombre', 'apellido')
+    list_editable = ('horario', 'telefono', 'email', 'deuda')
     search_fields = ('nombre', 'apellido','horario')
 
 
@@ -27,7 +27,7 @@ class Alumno_mesAdmin(admin.ModelAdmin):
 
     list_display = ('nombre', 'apellido', 'horario','cl1', 'cl2', 'cl3','cl4','cl5','cl6','cl7','cl8','cl9','cl10' ,'deuda', 'fecha_pago', 'desc_familia')
     list_display_links = ('nombre', 'apellido', 'horario')
-    list_editable = (  'cl1', 'cl2', 'cl3','cl4','cl5','cl6','cl7','cl8','cl9','cl10', 'fecha_pago')
+    list_editable = (  'cl1', 'cl2', 'cl3','cl4','cl5','cl6','cl7','cl8','cl9','cl10', 'deuda', 'fecha_pago')
     search_fields = ('nombre', 'apellido','horario')
 
 
