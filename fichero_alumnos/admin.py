@@ -18,6 +18,25 @@ class AlumnoAdmin(admin.ModelAdmin):
     list_display_links = ('nombre', 'apellido')
     list_editable = ('horario', 'telefono', 'email', 'deuda')
     search_fields = ('nombre', 'apellido','horario')
+    fieldsets = (
+        ('Datos Personales', {
+            'fields': (('nombre', 'apellido'),
+                ('edad', 'familiar_nombre'),
+                ('telefono', 'email'),
+                ('nacimiento', 'desc_familia'))
+        }),
+        ('Turno', {
+            'fields': (('horario', 'actividad'),
+            ('deuda', 'fecha_pago'),)
+        }),
+        ('Problema de salud', {
+            'fields': (('discapacidad', 'comentarios'))
+        }),
+        ('Foto', {
+            'fields': (('foto',),)
+        }),
+    )
+    
 
 
 
@@ -30,5 +49,25 @@ class Alumno_mesAdmin(admin.ModelAdmin):
     list_editable = (  'cl1', 'cl2', 'cl3','cl4','cl5','cl6','cl7','cl8','cl9','cl10', 'deuda', 'fecha_pago')
     search_fields = ('nombre', 'apellido','horario')
 
-
+    fieldsets = (
+        ('Datos Personales', {
+            'fields': (('nombre', 'apellido'),
+                ('edad', 'familiar_nombre'),
+                ('telefono', 'email'),
+                ('nacimiento', 'desc_familia'))
+        }),
+        ('Turno', {
+            'fields': (('horario', 'actividad'),
+            ('deuda', 'fecha_pago'),)
+        }),
+         ('Clases', {
+            'fields': (('cl1', 'cl2'), ('cl3', 'cl4'), ('cl5', 'cl6'), ('cl7', 'cl8'), ('cl9', 'cl10'),)
+        }),
+        ('Problema de salud', {
+            'fields': (('discapacidad', 'comentarios'))
+        }),
+        ('Foto', {
+            'fields': (('foto',),)
+        }),
+    )
 
