@@ -23,17 +23,16 @@ class AlumnoAdmin(admin.ModelAdmin):
             'fields': (('nombre', 'apellido'),
                 ('edad', 'familiar_nombre'),
                 ('telefono', 'email'),
-                ('nacimiento', 'desc_familia'))
+                ('nacimiento',))
         }),
         ('Turno', {
             'fields': (('horario', 'actividad'),
-            ('deuda', 'fecha_pago'),)
+            ('deuda', 'desc_familia'),
+            )
         }),
-        ('Problema de salud', {
-            'fields': (('discapacidad', 'comentarios'))
-        }),
-        ('Foto', {
-            'fields': (('foto',),)
+        ('Información extra', {
+            'fields': (('discapacidad', 'comentarios'),
+            ('foto', 'fecha_pago'))
         }),
     )
     
@@ -54,20 +53,19 @@ class Alumno_mesAdmin(admin.ModelAdmin):
             'fields': (('nombre', 'apellido'),
                 ('edad', 'familiar_nombre'),
                 ('telefono', 'email'),
-                ('nacimiento', 'desc_familia'))
+                ('nacimiento',))
         }),
         ('Turno', {
             'fields': (('horario', 'actividad'),
-            ('deuda', 'fecha_pago'),)
+            ('deuda', 'desc_familia'),
+            )
         }),
          ('Clases', {
             'fields': (('cl1', 'cl2'), ('cl3', 'cl4'), ('cl5', 'cl6'), ('cl7', 'cl8'), ('cl9', 'cl10'),)
         }),
-        ('Problema de salud', {
-            'fields': (('discapacidad', 'comentarios'))
-        }),
-        ('Foto', {
-            'fields': (('foto',),)
+        ('Información extra', {
+            'fields': (('discapacidad', 'comentarios'),
+            ('foto', 'fecha_pago'))
         }),
     )
 

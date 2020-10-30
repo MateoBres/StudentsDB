@@ -11,7 +11,7 @@ class Alumno(models.Model):
     edad = models.IntegerField(blank=True, null=True, default='')
     familiar_nombre = models.CharField(max_length=30, blank=True, null=True, default='')
 
-    telefono = models.CharField(max_length=30, blank=True, null=True, default='')
+    telefono = models.CharField(help_text='0000  012345', max_length=30, blank=True, null=True, default='')
     email = models.EmailField(blank=True, null=True, default='')
 
     nacimiento = models.CharField(help_text='01/01/2001', max_length=30, blank=True, null=True)    
@@ -21,7 +21,7 @@ class Alumno(models.Model):
     comentarios = models.TextField(blank=True, null=True)
    
     
-    horario = models.CharField(max_length=30,blank=True, null=True, default='')
+    horario = models.CharField(help_text='00dia  /  00dia', max_length=30,blank=True, null=True, default='')
     ACTIVIDAD = (
         ('Bebes','Bebes'),
         ('Escuelita','Escuelita'),
@@ -62,7 +62,7 @@ class Alumno_mes(models.Model):
     edad = models.IntegerField(blank=True, null=True, default='')
     familiar_nombre = models.CharField(max_length=30, blank=True, null=True, default='')
 
-    telefono = models.CharField(max_length=30, blank=True, null=True, default='')
+    telefono = models.CharField(help_text='0000  012345', max_length=30, blank=True, null=True, default='')
     email = models.EmailField(blank=True, null=True, default='')
 
     nacimiento = models.CharField(help_text='01/01/2001', max_length=30, blank=True, null=True)    
@@ -72,7 +72,7 @@ class Alumno_mes(models.Model):
     comentarios = models.TextField(blank=True, null=True)
    
     
-    horario = models.CharField(max_length=30,blank=True, null=True, default='')
+    horario = models.CharField(help_text='00dia  /  00dia', max_length=30,blank=True, null=True, default='')
     ACTIVIDAD = (
         ('Bebes','Bebes'),
         ('Escuelita','Escuelita'),
